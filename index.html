@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewEdo XP Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>NewEdo XP Calculator</h1>
+    <p>Here are some ways you can spend XP in NewEdo!</p>
+    <div>
+        <h1>Increase Attributes</h1>
+        <p>Attributes are your core stats, i.e. Heart, Power, Reflex, etc.. The calculation is 2 XP times the <b>Rank</b> of the attribute per point of increase.</p>
+        <div>
+            <label for="currentAttribute">Current Attribute Level:</label>
+            <input type="number" id="currentAttribute" name="currentAttribute" value="10"/>
+        </div>
+        <div>
+            <label for="desiredAttribute">Desired Attribute Level:</label>
+            <input type="number" id="desiredAttribute" name="desiredAttribute" value="10"/>
+        </div>
+        <div><input type="button" id="calculateXPAttribute" value="Calculate"  style="margin-left: 45px;"/></div>
+        <div>
+            <label for="xpCostAttribute">XP Cost:</label>
+            <input type="number" id="xpCostAttribute" name="xpCostAttribute" placeholder="0" disabled="true"/>
+        </div>
+
+        <h1>Learn or Improve Skills</h1>
+        <div>
+            <p>The cost of improving or learning a skill depends on the current <b>Rank</b> you have in the skill (i.e. how many dice you have added to your dice pool for that skill, excluding bonuses from paths and cybernetics) and the size of the die you want to add.</p>
+            <p>To use the calculator, enter your current <b>Rank</b> in the skill (if you haven't learned the skill yet, enter 0) and select the die you want to add, then click the Calculate button.</p>
+            <div>
+                <div>
+                    <label for="skillRank">Current Rank:</label>
+                    <input type="number" id="skillRank" name="skillRank" value="0"/>
+                </div>
+                <div>
+                    <label for="die" style="margin-left: 35px;">Die Size:</label>
+                    <select name="die" id="die">
+                        <option value="3">d4</option>
+                        <option value="4">d6</option>
+                        <option value="5">d8</option>
+                        <option value="7">d12</option>
+                    </select>
+                </div>
+                <div><input type="button" id="calculateXPSkill" value="Calculate"  style="margin-left: 45px;"/></div>
+                <div>
+                    <label for="xpCostSkill">XP Cost:</label>
+                    <input type="number" id="xpCostSkill" name="xpCostSkill" placeholder="0" disabled="true"/>
+                </div>
+            </div>
+        </div>
+
+        <h1>Learn Rotes</h1>
+        <p>Every rote costs <b>10 XP</b> regardless of what Kami it comes from. You may only learn rotes from Kami that you already have access to, and you may not buy access to other Kami with XP.</p>
+        <p>If you want to gain access to a kami that you normally would not be able to access, ask the GM how you might do so.</p>
+
+        <h1>Improve Backgrounds</h1>
+        <p>Each point gained in a background costs <b>2 XP</b> regardless of your current Rank in the background, but you may only put a maximum of 3 points into backgrounds per session.</p>
+
+        <h1>Change your Fate</h1>
+        <p>You can increase specific lines of your fate card by spending <b>3 XP per 1% increase</b>, but you may only do so up to two times per session. You may not change your crit chance this way.</p>
+    </div>
+
+    <script src="./javascript.js"></script>
+</body>
+</html>
