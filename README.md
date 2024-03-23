@@ -1,0 +1,1 @@
+This is a simple XP calculator for the TTRPG NewEdo by SaltyGames that I made for my own group's use. The rules on this calculator are not exactly the same as the rules in the book, but have instead been altered to suit my group.
